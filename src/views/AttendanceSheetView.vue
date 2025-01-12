@@ -6,6 +6,7 @@
           :key="x.studentID.id"
           :studentname="x.studentID.name"
           :studentID="x.studentID.id"
+          :studentPresence="x.studentID.id + '_' +x.presenceID.id"
           :presences="data2"
           />
       </div>

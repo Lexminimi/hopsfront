@@ -3,7 +3,7 @@
 <template>
   <div class="tile">
 
-    <h2>{{ studentname }}{{ studentID }}</h2>
+    <h2>{{ studentname }}</h2>
 
   </div>
   <presence-type
@@ -11,6 +11,7 @@
     :options="presences"
     label="Attendance"
     :studentID = "studentID"
+    :studentPresence = "studentPresence"
   />
 </template>
 
@@ -18,6 +19,6 @@
 
 <script>
 export default {
-  props: ['studentname', 'studentID', 'presences']
+  props: ['studentname', 'studentID', 'presences','studentPresence']
 };
 </script>

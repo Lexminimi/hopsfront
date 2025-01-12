@@ -5,16 +5,16 @@
     <legend v-if="label">{{ label }}</legend>
     <div v-for="(option, index) in options" :key="option.text"
     >
-      <label :for="id + index">
-
+      <label :for="studentID + '_' + option.id">
       <input
-        :id="id + index"
+        :id="studentID + '_' + option.id"
         :name= "studentID"
         type="radio"
         :value= "studentID + '_' + option.id"
         :class="inputClass"
         :required="required"
         v-model = "alma"
+        :checked="(studentID + '_' + option.id) === studentPresence"
         @change="updateValue(studentID + '_' + option.id)"
       />
       {{ option.title }}</label>
@@ -41,6 +41,9 @@ export default {
   },
   props:  {
     studentID: {
+      type: String
+    },
+    studentPresence: {
       type: String
     },
     id: {
