@@ -16,7 +16,7 @@
 <script>
 
 
-const apiUrl = 'http://127.0.0.1:8000/';
+const apiUrl = 'http://127.0.0.1:8000/presences/';
 
 export default {
   data() {
@@ -32,33 +32,13 @@ export default {
 
   methods: {
     async fetchData() {
-      console.log('akiiii')
-      fetch(apiUrl + 'create_attendance/1/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Basic ${btoa("reka:B1a9l8i8")}` // Correctly interpolates the encoded credentials
-        }
-      })
-        .then((response) => {
-          //this.data = response.json(); // Bind the fetched data to the Vue instance
-          //console.log(response)
-          return response.json();
-
-          //return this.data
-        })
-        .then((data)=>{
-          this.data = data;
-        })
-        .catch((error) => {
-          console.error('Error fetching data:', error);
-        });
-
+      const response = await fetch("/data.json");
+      this.data = await response.json();
 
     },
     async fetchPresence() {
       console.log('akiiii')
-        fetch(apiUrl + 'presences/', {
+        fetch(apiUrl, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
