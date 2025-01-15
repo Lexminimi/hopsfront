@@ -6,5 +6,9 @@
   <section class="tiles-container">
     <RouterView />
   </section>
+  <ceter><back-button></back-button></ceter>
 </main>
+
 </template>
+<script setup lang="ts">
+</script>

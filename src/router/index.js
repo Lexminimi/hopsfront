@@ -32,6 +32,11 @@ const router = createRouter({
       path: '/attend',
       name: 'attend',
       component: AttendanceSheetView,
+    },
+    {
+      path: '/create_attendance/:groupId',
+      name: 'create-attend',
+      component: AttendanceSheetView,
     }
   ],
 })

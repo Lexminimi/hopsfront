@@ -25,7 +25,7 @@ export default {
   methods: {
     goToStudentPage(groupId) {
       // Ensure the router is working correctly
-      this.$router.push({ name: "students", params: { groupId } });
+      this.$router.push({ name: "create-attend", params: { groupId } });
     },
   },
   mounted() {

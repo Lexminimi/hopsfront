@@ -10,6 +10,7 @@
           :presences="data2"
           />
       </div>
+    User {{ $route.params.groupId }}
   </div>
 </template>
 
@@ -33,7 +34,7 @@ export default {
   methods: {
     async fetchData() {
       console.log('akiiii')
-      fetch(apiUrl + 'create_attendance/1/', {
+      fetch(apiUrl + 'create_attendance/'+ this.$route.params.groupId +'/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
