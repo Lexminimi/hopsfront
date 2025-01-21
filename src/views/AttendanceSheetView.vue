@@ -8,9 +8,9 @@
           :studentID="x.studentID.id"
           :studentPresence="x.studentID.id + '_' +x.presenceID.id"
           :presences="data2"
+          :groupID="$route.params.groupId"
           />
       </div>
-    User {{ $route.params.groupId }}
   </div>
 </template>
 

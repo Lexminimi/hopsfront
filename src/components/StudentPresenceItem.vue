@@ -12,6 +12,7 @@
     label="Attendance"
     :studentID = "studentID"
     :studentPresence = "studentPresence"
+    :groupID = "groupID"
   />
 </template>
 
@@ -19,6 +20,6 @@
 
 <script>
 export default {
-  props: ['studentname', 'studentID', 'presences','studentPresence']
+  props: ['groupID','studentname', 'studentID', 'presences','studentPresence']
 };
 </script>
