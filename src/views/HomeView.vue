@@ -11,7 +11,7 @@
       Check students
     </p>
   </div>
-  <div class="tile" @click="goToGroups">>
+  <div class="tile" @click="goToGroups">
     <h2>Groups Page</h2>
     <p>
     </p>

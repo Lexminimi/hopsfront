@@ -5,12 +5,10 @@ const checked_attendance = ref[{}]
 </script>
 
 <template>
-  <fieldset>
+  <fieldset >
     <legend v-if="label">{{ label }}</legend>
-    <div v-for="(option, index) in options" :key="option.text"
-    >
-      <label :for="groupID + '_' + studentID + '_' + option.id">
-        {{groupID }}
+    <div class = "presence-option-container">
+      <label v-for="(option, index) in options" :key="option.text" :for="groupID + '_' + studentID + '_' + option.id">
         <input
           :id = "groupID + '_' + studentID + '_' + option.id"
           :name = "studentID"

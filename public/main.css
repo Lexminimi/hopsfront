@@ -54,7 +54,7 @@ body {
 .menu {
   padding: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 15px;
 }
 
@@ -147,4 +147,10 @@ body {
   transform: translateY(-2px);
   opacity: 1;
   font-weight: bold;
+}
+
+.presence-option-container
+{
+  display: inline-block;
+  padding: 50px;
 }
