@@ -1,0 +1,39 @@
+{
+  "date": "2025-01-05",
+  "group": 2,
+  "name_list": [
+    {
+      "studentID": {
+        "id": 2,
+        "name": "Réka",
+        "teacher": 2
+      },
+      "presenceID": {
+        "id": 1,
+        "title": "Jelen"
+      }
+    },
+    {
+      "studentID": {
+        "id": 4,
+        "name": "Bori",
+        "teacher": 2
+      },
+      "presenceID": {
+        "id": 2,
+        "title": "Igazolt"
+      }
+    },
+    {
+      "studentID": {
+        "id": 7,
+        "name": "Gyöngyi",
+        "teacher": 2
+      },
+      "presenceID": {
+        "id": 3,
+        "title": "Igazolatlan"
+      }
+    }
+  ]
+}
