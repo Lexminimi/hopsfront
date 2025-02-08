@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "vue-cli-service build",
+    "build": "vite build",
     "deploy": "vite build && gh-pages -d dist",
     "lint": "eslint . --fix",
     "dev": "vite",
