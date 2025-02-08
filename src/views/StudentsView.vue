@@ -15,7 +15,7 @@ const goToStudentPage = (groupId) => {
   router.push({ name: 'students/:groupId' });
 }
 
-const apiUrl = 'http://127.0.0.1:8000/group/1';
+const apiUrl = 'https://fischerb2.pythonanywhere.com/group/1';
 
 export default {
   data() {
