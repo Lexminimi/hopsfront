@@ -19,7 +19,7 @@
 
 <script>
 
-const apiUrl = 'http://127.0.0.1:8000/presences/';
+const apiUrl = 'https://fischerb2.pythonanywhere.com/presences/';
 
 export default {
   data() {

@@ -17,7 +17,7 @@
 <script>
 
 
-const apiUrl = 'http://fischerb2.pythonanywhere.com/';
+const apiUrl = 'https://fischerb2.pythonanywhere.com/';
 
 export default {
   data() {

@@ -14,7 +14,7 @@ const router = useRouter();
 
 
 
-const apiUrl = 'http://fischerb2.pythonanywhere.com/groups/';
+const apiUrl = 'https://fischerb2.pythonanywhere.com/groups/';
 
 export default {
   data() {
