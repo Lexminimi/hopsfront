@@ -11,7 +11,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-  base: '/hopsfront/',
+  base: '/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
