@@ -4,6 +4,16 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   base: '/hopsfront/',
+  build: {
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+      },
+    },
+  },
   plugins: [
     vue(),
     VitePWA({
@@ -35,7 +45,8 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
-        navigateFallback: 'index.html',
+        navigateFallback: '/hopsfront/index.html',
+        navigateFallbackAllowlist: [/^\/hopsfront\//],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -52,6 +63,10 @@ export default defineConfig({
             }
           }
         ]
+      },
+      devOptions: {
+        enabled: true,
+        type: 'module'
       }
     })
   ]
