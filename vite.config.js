@@ -14,18 +14,18 @@ export default defineConfig({
         short_name: 'MyApp',
         description: 'My Awesome App description',
         theme_color: '#ffffff',
-        start_url: '/',
-        scope: '/',
+        start_url: '.',
+        scope: '.',
         display: 'standalone',
         background_color: '#ffffff',
         icons: [
           {
-            src: '/hopsfront/img/icons/icon-192x192.png',
+            src: './img/icons/icon-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: '/hopsfront/img/icons/icon-512x512.png',
+            src: './img/icons/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png'
           }
@@ -33,6 +33,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        navigateFallback: null,
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
