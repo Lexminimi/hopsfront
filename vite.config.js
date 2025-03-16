@@ -14,8 +14,8 @@ export default defineConfig({
         short_name: 'MyApp',
         description: 'My Awesome App description',
         theme_color: '#ffffff',
-        start_url: '/hopsfront/',
-        scope: '/hopsfront/',
+        start_url: '/',
+        scope: '/',
         display: 'standalone',
         background_color: '#ffffff',
         icons: [
