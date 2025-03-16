@@ -10,25 +10,26 @@ export default defineConfig({
       registerType: 'autoUpdate',
       injectRegister: 'auto',
       strategies: 'generateSW',
-      filename: 'service-worker.js',
+      filename: 'sw.js',
+      manifestFilename: 'manifest.json',
       includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
         name: 'My Awesome App',
         short_name: 'MyApp',
         description: 'My Awesome App description',
         theme_color: '#ffffff',
-        start_url: '.',
-        scope: '.',
+        start_url: '/hopsfront/',
+        scope: '/hopsfront/',
         display: 'standalone',
         background_color: '#ffffff',
         icons: [
           {
-            src: './img/icons/icon-192x192.png',
+            src: 'img/icons/icon-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: './img/icons/icon-512x512.png',
+            src: 'img/icons/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png'
           }
@@ -36,7 +37,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
-        navigateFallback: null,
+        navigateFallback: 'index.html',
         cleanupOutdatedCaches: true,
         sourcemap: true,
         runtimeCaching: [
