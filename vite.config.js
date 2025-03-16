@@ -3,7 +3,6 @@ import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  base: '/',
   plugins: [
     vue(),
     VitePWA({
@@ -14,17 +13,14 @@ export default defineConfig({
         short_name: 'MyApp',
         description: 'My Awesome App description',
         theme_color: '#ffffff',
-        start_url: '/',
-        display: 'standalone',
-        background_color: '#ffffff',
         icons: [
           {
-            src: '/img/icons/icon-192x192.png',
+            src: 'img/pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: '/img/icons/icon-512x512.png',
+            src: 'pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png'
           }
@@ -32,7 +28,6 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
-        navigateFallback: 'index.html',
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
