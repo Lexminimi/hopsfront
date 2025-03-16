@@ -3,31 +3,28 @@ import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  base: '/hopsfront/',
+  base: '/',
   plugins: [
     vue(),
     VitePWA({
       registerType: 'autoUpdate',
-      injectRegister: 'auto',
-      strategies: 'generateSW',
       includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
         name: 'My Awesome App',
         short_name: 'MyApp',
         description: 'My Awesome App description',
         theme_color: '#ffffff',
-        start_url: '/hopsfront/',
-        scope: '/hopsfront/',
+        start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',
         icons: [
           {
-            src: '/hopsfront/img/icons/icon-192x192.png',
+            src: '/img/icons/icon-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: '/hopsfront/img/icons/icon-512x512.png',
+            src: '/img/icons/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png'
           }
