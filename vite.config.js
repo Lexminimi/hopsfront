@@ -8,13 +8,10 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: 'autoUpdate',
-      injectRegister: 'script',
-      strategies: 'injectManifest',
-      srcDir: 'src',
-      filename: 'sw.js',
-      base: '/hopsfront/',
-      buildBase: '/hopsfront/',
-      includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
+      injectRegister: 'auto',
+      devOptions: {
+        enabled: true
+      },
       manifest: {
         name: 'My Awesome App',
         short_name: 'MyApp',
@@ -26,12 +23,12 @@ export default defineConfig({
         background_color: '#ffffff',
         icons: [
           {
-            src: '/hopsfront/img/icons/icon-192x192.png',
+            src: 'img/icons/icon-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: '/hopsfront/img/icons/icon-512x512.png',
+            src: 'img/icons/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png'
           }
@@ -39,9 +36,8 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
-        navigateFallback: '/hopsfront/index.html',
+        navigateFallback: 'index.html',
         cleanupOutdatedCaches: true,
-        sourcemap: true,
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -50,7 +46,7 @@ export default defineConfig({
               cacheName: 'google-fonts-cache',
               expiration: {
                 maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                maxAgeSeconds: 60 * 60 * 24 * 365
               },
               cacheableResponse: {
                 statuses: [0, 200]
@@ -58,10 +54,6 @@ export default defineConfig({
             }
           }
         ]
-      },
-      devOptions: {
-        enabled: true,
-        type: 'module'
       }
     })
   ]
